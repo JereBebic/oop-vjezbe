@@ -1,20 +1,19 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
 int main() {
     int a{}, b{};
 
-    cin >> a >> b;
+    if (scanf("%d %d", &a, &b) != 2) {
+        return 1;
+    }
 
     int zbroj{a + b};
     double sredina{(a + b) / 2.0};
     bool usporedba{a < b};
 
-    cout << zbroj << endl;
-    cout << sredina << endl;
-    cout << usporedba << endl;
+    printf("%d\n", zbroj);
+    printf("%.2f\n", sredina);
+    printf("%d\n", usporedba);
 
-    cin.ignore();
-    cin.get();
     return 0;
 }
