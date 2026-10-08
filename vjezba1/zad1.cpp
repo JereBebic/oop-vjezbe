@@ -1,19 +1,23 @@
-#include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 int main() {
-    int a{}, b{};
+    int a{};
+    int b{};
 
-    if (scanf("%d %d", &a, &b) != 2) {
-        return 1;
-    }
+    cout << "Unesite broj a: ";
+    cin >> a;
+    cout << "Unesite broj b: ";
+    cin >> b;
 
     int zbroj{a + b};
     double sredina{(a + b) / 2.0};
-    bool usporedba{a < b};
+    bool jeManje{a < b};
 
-    printf("%d\n", zbroj);
-    printf("%.2f\n", sredina);
-    printf("%d\n", usporedba);
+    cout << "Zbroj: " << zbroj << endl;
+    cout << "Aritmeticka sredina: " << sredina << endl;
+    cout << "Usporedba (a < b): " << jeManje << endl;
 
     return 0;
 }
